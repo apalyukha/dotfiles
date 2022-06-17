@@ -14,8 +14,8 @@ return require('packer').startup(function(use)
 use 'wbthomason/packer.nvim'
 use {'catppuccin/nvim', as = 'catppuccin'}
 
---colorscheme palenightfall
---use 'JoosepAlviste/palenightfall.nvim'
+-- Onedark
+use 'navarasu/onedark.nvim'
 
 --Treesitter
 use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
@@ -78,6 +78,14 @@ use 'folke/todo-comments.nvim'
 
 --devicons
 use 'kyazdani42/nvim-web-devicons'
+
+use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+}
 
 --fullstack dev
 use 'pangloss/vim-javascript' --JS support
